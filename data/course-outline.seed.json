@@ -1,0 +1,2390 @@
+{
+  "title": "AI From Algorithms to AI Factories",
+  "subtitle": "A Coursera-style deep dive into the software, hardware, and infrastructure behind modern AI",
+  "description": "This course teaches the most important foundations in AI, spanning statistical learning, deep learning, foundation models, chips, distributed systems, and datacenter operations.",
+  "modules": [
+    "Foundations and historical context",
+    "Classical AI, uncertainty, and sequential decision-making",
+    "Deep learning foundations",
+    "Foundation models and modern AI systems",
+    "The hardware and systems stack",
+    "Safety, interpretability, and the future"
+  ],
+  "lessons": [
+    {
+      "id": "lesson-01",
+      "module": "Foundations and historical context",
+      "number": 1,
+      "title": "What AI is: history, paradigms, and why the field looks the way it does now",
+      "summary": "This lesson explains the central ideas behind what ai is: history, paradigms, and why the field looks the way it does now and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind what ai is: history, paradigms, and why the field looks the way it does now.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Turing, Computing Machinery and Intelligence"
+        },
+        {
+          "title": "McCarthy et al., Dartmouth Proposal"
+        },
+        {
+          "title": "Samuel, Checkers"
+        },
+        {
+          "title": "Jordan and Mitchell, Trends and prospects"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, what ai is: history, paradigms, and why the field looks the way it does now, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-01-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on what ai is: history, paradigms, and why the field looks the way it does now?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-01-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-01-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-01-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-01-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-02",
+      "module": "Foundations and historical context",
+      "number": 2,
+      "title": "Mathematical foundations for AI",
+      "summary": "This lesson explains the central ideas behind mathematical foundations for ai and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind mathematical foundations for ai.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Shannon, A Mathematical Theory of Communication"
+        },
+        {
+          "title": "Kullback and Leibler, On Information and Sufficiency"
+        },
+        {
+          "title": "Robbins and Monro, Stochastic Approximation"
+        },
+        {
+          "title": "Bottou et al., Optimization Methods for Large-Scale Machine Learning"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, mathematical foundations for ai, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-02-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on mathematical foundations for ai?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-02-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-02-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-02-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-02-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-03",
+      "module": "Foundations and historical context",
+      "number": 3,
+      "title": "Statistical learning theory and evaluation",
+      "summary": "This lesson explains the central ideas behind statistical learning theory and evaluation and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind statistical learning theory and evaluation.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Valiant, A Theory of the Learnable"
+        },
+        {
+          "title": "Geman et al., Bias Variance Dilemma"
+        },
+        {
+          "title": "Recht et al., Do CIFAR-10 Classifiers Generalize?"
+        },
+        {
+          "title": "Guo et al., Calibration of Modern Neural Networks"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, statistical learning theory and evaluation, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-03-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on statistical learning theory and evaluation?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-03-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-03-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-03-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-03-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-04",
+      "module": "Foundations and historical context",
+      "number": 4,
+      "title": "Core machine learning algorithms",
+      "summary": "This lesson explains the central ideas behind core machine learning algorithms and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind core machine learning algorithms.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Cortes and Vapnik, Support-Vector Networks"
+        },
+        {
+          "title": "Breiman, Random Forests"
+        },
+        {
+          "title": "Friedman, Gradient Boosting Machine"
+        },
+        {
+          "title": "MacQueen, K-means"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, core machine learning algorithms, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-04-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on core machine learning algorithms?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-04-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-04-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-04-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-04-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-05",
+      "module": "Classical AI, uncertainty, and sequential decision-making",
+      "number": 5,
+      "title": "Search, planning, and symbolic AI",
+      "summary": "This lesson explains the central ideas behind search, planning, and symbolic ai and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind search, planning, and symbolic ai.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Hart et al., A Formal Basis for Heuristic Search"
+        },
+        {
+          "title": "Fikes and Nilsson, STRIPS"
+        },
+        {
+          "title": "Shortliffe and Buchanan, Inexact Reasoning in Medicine"
+        },
+        {
+          "title": "Kautz and Selman, Planning as Satisfiability"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, search, planning, and symbolic ai, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-05-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on search, planning, and symbolic ai?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-05-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-05-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-05-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-05-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-06",
+      "module": "Classical AI, uncertainty, and sequential decision-making",
+      "number": 6,
+      "title": "Probabilistic modeling and graphical models",
+      "summary": "This lesson explains the central ideas behind probabilistic modeling and graphical models and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind probabilistic modeling and graphical models.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Pearl, Belief Networks"
+        },
+        {
+          "title": "Rabiner, Hidden Markov Models"
+        },
+        {
+          "title": "Jordan et al., Variational Methods for Graphical Models"
+        },
+        {
+          "title": "Wainwright and Jordan, Graphical Models and Variational Inference"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, probabilistic modeling and graphical models, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-06-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on probabilistic modeling and graphical models?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-06-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-06-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-06-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-06-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-07",
+      "module": "Classical AI, uncertainty, and sequential decision-making",
+      "number": 7,
+      "title": "Causality and decision-making",
+      "summary": "This lesson explains the central ideas behind causality and decision-making and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind causality and decision-making.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Rubin, Estimating Causal Effects"
+        },
+        {
+          "title": "Pearl, Causal Diagrams"
+        },
+        {
+          "title": "Pearl, Causal Inference Overview"
+        },
+        {
+          "title": "Scholkopf et al., Toward Causal Representation Learning"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, causality and decision-making, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-07-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on causality and decision-making?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-07-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-07-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-07-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-07-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-08",
+      "module": "Classical AI, uncertainty, and sequential decision-making",
+      "number": 8,
+      "title": "Reinforcement learning fundamentals",
+      "summary": "This lesson explains the central ideas behind reinforcement learning fundamentals and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind reinforcement learning fundamentals.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Watkins and Dayan, Q-learning"
+        },
+        {
+          "title": "Williams, Policy Gradient Methods"
+        },
+        {
+          "title": "Mnih et al., DQN"
+        },
+        {
+          "title": "Schulman et al., PPO"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, reinforcement learning fundamentals, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-08-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on reinforcement learning fundamentals?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-08-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-08-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-08-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-08-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-09",
+      "module": "Deep learning foundations",
+      "number": 9,
+      "title": "Neural networks and backpropagation",
+      "summary": "This lesson explains the central ideas behind neural networks and backpropagation and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind neural networks and backpropagation.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Rosenblatt, The Perceptron"
+        },
+        {
+          "title": "Rumelhart et al., Backpropagation"
+        },
+        {
+          "title": "Cybenko, Universal Approximation"
+        },
+        {
+          "title": "LeCun et al., Gradient-Based Learning Applied to Document Recognition"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, neural networks and backpropagation, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-09-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on neural networks and backpropagation?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-09-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-09-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-09-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-09-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-10",
+      "module": "Deep learning foundations",
+      "number": 10,
+      "title": "How deep networks actually train",
+      "summary": "This lesson explains the central ideas behind how deep networks actually train and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind how deep networks actually train.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Glorot and Bengio, Difficulty of Training Deep Feedforward Networks"
+        },
+        {
+          "title": "Ioffe and Szegedy, Batch Normalization"
+        },
+        {
+          "title": "He et al., Deep Residual Learning"
+        },
+        {
+          "title": "Goyal et al., Accurate Large Minibatch SGD"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, how deep networks actually train, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-10-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on how deep networks actually train?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-10-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-10-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-10-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-10-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-11",
+      "module": "Deep learning foundations",
+      "number": 11,
+      "title": "Vision and representation learning",
+      "summary": "This lesson explains the central ideas behind vision and representation learning and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind vision and representation learning.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Krizhevsky et al., AlexNet"
+        },
+        {
+          "title": "Chen et al., SimCLR"
+        },
+        {
+          "title": "He et al., MoCo"
+        },
+        {
+          "title": "Dosovitskiy et al., Vision Transformer"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, vision and representation learning, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-11-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on vision and representation learning?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-11-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-11-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-11-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-11-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-12",
+      "module": "Deep learning foundations",
+      "number": 12,
+      "title": "Sequence modeling before and after attention",
+      "summary": "This lesson explains the central ideas behind sequence modeling before and after attention and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind sequence modeling before and after attention.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Hochreiter and Schmidhuber, LSTM"
+        },
+        {
+          "title": "Sutskever et al., Seq2Seq"
+        },
+        {
+          "title": "Bahdanau et al., Attention for Translation"
+        },
+        {
+          "title": "Vaswani et al., Attention Is All You Need"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, sequence modeling before and after attention, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-12-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on sequence modeling before and after attention?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-12-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-12-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-12-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-12-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-13",
+      "module": "Deep learning foundations",
+      "number": 13,
+      "title": "Generative modeling",
+      "summary": "This lesson explains the central ideas behind generative modeling and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind generative modeling.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "van den Oord et al., PixelRNN"
+        },
+        {
+          "title": "Kingma and Welling, VAE"
+        },
+        {
+          "title": "Goodfellow et al., GANs"
+        },
+        {
+          "title": "Ho et al., DDPM"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, generative modeling, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-13-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on generative modeling?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-13-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-13-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-13-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-13-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-14",
+      "module": "Foundation models and modern AI systems",
+      "number": 14,
+      "title": "Language model pretraining",
+      "summary": "This lesson explains the central ideas behind language model pretraining and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind language model pretraining.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Bengio et al., Neural Probabilistic Language Model"
+        },
+        {
+          "title": "Devlin et al., BERT"
+        },
+        {
+          "title": "Brown et al., GPT-3"
+        },
+        {
+          "title": "Hoffmann et al., Chinchilla"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, language model pretraining, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-14-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on language model pretraining?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-14-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-14-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-14-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-14-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-15",
+      "module": "Foundation models and modern AI systems",
+      "number": 15,
+      "title": "Transformers in depth",
+      "summary": "This lesson explains the central ideas behind transformers in depth and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind transformers in depth.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Vaswani et al., Attention Is All You Need"
+        },
+        {
+          "title": "Dai et al., Transformer-XL"
+        },
+        {
+          "title": "Fedus et al., Switch Transformer"
+        },
+        {
+          "title": "Dao et al., FlashAttention"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, transformers in depth, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-15-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on transformers in depth?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-15-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-15-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-15-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-15-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-16",
+      "module": "Foundation models and modern AI systems",
+      "number": 16,
+      "title": "Post-training and alignment",
+      "summary": "This lesson explains the central ideas behind post-training and alignment and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind post-training and alignment.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Christiano et al., Human Preferences"
+        },
+        {
+          "title": "Ouyang et al., InstructGPT"
+        },
+        {
+          "title": "Bai et al., Constitutional AI"
+        },
+        {
+          "title": "Rafailov et al., DPO"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, post-training and alignment, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-16-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on post-training and alignment?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-16-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-16-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-16-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-16-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-17",
+      "module": "Foundation models and modern AI systems",
+      "number": 17,
+      "title": "Retrieval, tools, agents, and evaluations",
+      "summary": "This lesson explains the central ideas behind retrieval, tools, agents, and evaluations and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind retrieval, tools, agents, and evaluations.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Hendrycks et al., MMLU"
+        },
+        {
+          "title": "Lewis et al., RAG"
+        },
+        {
+          "title": "Schick et al., Toolformer"
+        },
+        {
+          "title": "Yao et al., ReAct"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, retrieval, tools, agents, and evaluations, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-17-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on retrieval, tools, agents, and evaluations?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-17-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-17-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-17-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-17-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-18",
+      "module": "Foundation models and modern AI systems",
+      "number": 18,
+      "title": "Multimodal foundation models",
+      "summary": "This lesson explains the central ideas behind multimodal foundation models and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind multimodal foundation models.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Radford et al., CLIP"
+        },
+        {
+          "title": "Alayrac et al., Flamingo"
+        },
+        {
+          "title": "Driess et al., PaLM-E"
+        },
+        {
+          "title": "Gemini team, Gemini"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, multimodal foundation models, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-18-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on multimodal foundation models?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-18-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-18-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-18-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-18-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-19",
+      "module": "The hardware and systems stack",
+      "number": 19,
+      "title": "Numerical computing for AI",
+      "summary": "This lesson explains the central ideas behind numerical computing for ai and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind numerical computing for ai.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Micikevicius et al., Mixed Precision Training"
+        },
+        {
+          "title": "Dettmers et al., LLM.int8()"
+        },
+        {
+          "title": "Dettmers et al., QLoRA"
+        },
+        {
+          "title": "Rouhani et al., Microscaling Data Formats"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, numerical computing for ai, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-19-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on numerical computing for ai?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-19-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-19-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-19-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-19-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-20",
+      "module": "The hardware and systems stack",
+      "number": 20,
+      "title": "From transistors to AI chips",
+      "summary": "This lesson explains the central ideas behind from transistors to ai chips and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind from transistors to ai chips.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Dennard et al., MOSFET Design"
+        },
+        {
+          "title": "Horowitz, Computing's Energy Problem"
+        },
+        {
+          "title": "Sze et al., Efficient Processing of DNNs"
+        },
+        {
+          "title": "Jouppi et al., TPU Performance Analysis"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, from transistors to ai chips, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-20-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on from transistors to ai chips?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-20-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-20-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-20-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-20-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-21",
+      "module": "The hardware and systems stack",
+      "number": 21,
+      "title": "AI accelerators: GPUs, TPUs, systolic arrays, and interconnects",
+      "summary": "This lesson explains the central ideas behind ai accelerators: gpus, tpus, systolic arrays, and interconnects and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind ai accelerators: gpus, tpus, systolic arrays, and interconnects.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Lindholm et al., NVIDIA Tesla"
+        },
+        {
+          "title": "Chen et al., Eyeriss"
+        },
+        {
+          "title": "Jouppi et al., Domain-Specific Supercomputer for Training"
+        },
+        {
+          "title": "Jouppi et al., TPU v4"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, ai accelerators: gpus, tpus, systolic arrays, and interconnects, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-21-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on ai accelerators: gpus, tpus, systolic arrays, and interconnects?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-21-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-21-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-21-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-21-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-22",
+      "module": "The hardware and systems stack",
+      "number": 22,
+      "title": "Distributed training and inference systems",
+      "summary": "This lesson explains the central ideas behind distributed training and inference systems and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind distributed training and inference systems.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Dean et al., Large Scale Distributed Deep Networks"
+        },
+        {
+          "title": "Shoeybi et al., Megatron-LM"
+        },
+        {
+          "title": "Rajbhandari et al., ZeRO"
+        },
+        {
+          "title": "Kwon et al., PagedAttention"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, distributed training and inference systems, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-22-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on distributed training and inference systems?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-22-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-22-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-22-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-22-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-23",
+      "module": "The hardware and systems stack",
+      "number": 23,
+      "title": "AI datacenters at scale",
+      "summary": "This lesson explains the central ideas behind ai datacenters at scale and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind ai datacenters at scale.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Al-Fares et al., Scalable Datacenter Network Architecture"
+        },
+        {
+          "title": "Singh et al., Jupiter Rising"
+        },
+        {
+          "title": "Dean and Barroso, The Tail at Scale"
+        },
+        {
+          "title": "Xiao et al., Gandiva"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, ai datacenters at scale, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-23-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on ai datacenters at scale?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-23-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-23-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-23-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-23-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-24",
+      "module": "Safety, interpretability, and the future",
+      "number": 24,
+      "title": "Robustness, safety, interpretability, and governance",
+      "summary": "This lesson explains the central ideas behind robustness, safety, interpretability, and governance and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind robustness, safety, interpretability, and governance.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Szegedy et al., Intriguing Properties of Neural Networks"
+        },
+        {
+          "title": "Hendrycks and Dietterich, Robustness Benchmarks"
+        },
+        {
+          "title": "Marks et al., Circuit Tracing"
+        },
+        {
+          "title": "Mitchell et al., Model Cards"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, robustness, safety, interpretability, and governance, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-24-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on robustness, safety, interpretability, and governance?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-24-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-24-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-24-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-24-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    },
+    {
+      "id": "lesson-25",
+      "module": "Safety, interpretability, and the future",
+      "number": 25,
+      "title": "Frontier directions in AI research",
+      "summary": "This lesson explains the central ideas behind frontier directions in ai research and connects the research lineage to modern AI practice.",
+      "objectives": [
+        "Explain the key intuition behind frontier directions in ai research.",
+        "Connect the assigned papers to the historical arc of AI.",
+        "Use the concepts from this lesson to reason about current AI systems."
+      ],
+      "papers": [
+        {
+          "title": "Ha and Schmidhuber, World Models"
+        },
+        {
+          "title": "Reed et al., A Generalist Agent"
+        },
+        {
+          "title": "Brohan et al., RT-2"
+        },
+        {
+          "title": "Jumper et al., AlphaFold"
+        }
+      ],
+      "lessonPlan": [
+        "Start by mapping the lesson topic, frontier directions in ai research, to the broader AI stack of algorithms, systems, and deployment.",
+        "Define the core terms carefully and contrast them with neighboring concepts so the student can build a precise mental model.",
+        "Walk through the key papers in chronological order, emphasizing what each one contributed and what limitation it addressed.",
+        "Translate the papers into practical engineering consequences: what changes in model design, system design, or evaluation once these ideas are understood.",
+        "End with a synthesis section that explains why the topic still matters for frontier AI today."
+      ],
+      "quiz": [
+        {
+          "id": "lesson-25-q1",
+          "prompt": "Which statement best captures the main goal of the lesson on frontier directions in ai research?",
+          "options": [
+            "To memorize benchmarks without understanding system implications",
+            "To understand the topic conceptually and connect it to modern AI practice",
+            "To focus only on historical papers and ignore current relevance",
+            "To replace all empirical evaluation with intuition"
+          ],
+          "answerIndex": 1,
+          "explanation": "Each lesson is designed to connect foundational research to current model, hardware, and systems decisions."
+        },
+        {
+          "id": "lesson-25-q2",
+          "prompt": "Why are the key papers arranged as a short curated list instead of a long reading dump?",
+          "options": [
+            "Because the goal is to maximize recall with a manageable reading load",
+            "Because papers are optional and not relevant",
+            "Because long reading lists are always worse",
+            "Because implementation is more important than theory in every case"
+          ],
+          "answerIndex": 0,
+          "explanation": "The course is optimized for signal rather than volume, so each reading should carry a large share of the lesson."
+        },
+        {
+          "id": "lesson-25-q3",
+          "prompt": "What should a student be able to do after completing the lesson plan?",
+          "options": [
+            "Recite paper titles only",
+            "Explain definitions, compare ideas, and connect them to deployed AI systems",
+            "Avoid ambiguity by refusing to reason from incomplete evidence",
+            "Skip evaluation because the papers already prove the conclusions"
+          ],
+          "answerIndex": 1,
+          "explanation": "The lesson plan is meant to produce usable understanding, not passive familiarity."
+        },
+        {
+          "id": "lesson-25-q4",
+          "prompt": "What is the role of the synthesis section at the end of each lesson?",
+          "options": [
+            "It summarizes why the topic matters for frontier AI and product systems",
+            "It repeats the abstract of the first paper",
+            "It replaces the quiz",
+            "It removes the need to understand definitions"
+          ],
+          "answerIndex": 0,
+          "explanation": "Synthesis helps students connect research lineage to current model, hardware, and product realities."
+        },
+        {
+          "id": "lesson-25-q5",
+          "prompt": "What is the best way to use the quiz in this course design?",
+          "options": [
+            "As a memorization drill with no feedback",
+            "As a checkpoint for understanding with immediate explanations",
+            "As a ranking mechanism only",
+            "As a replacement for reading the papers"
+          ],
+          "answerIndex": 1,
+          "explanation": "The quiz is meant to confirm understanding and reinforce concepts with feedback."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Course Content",
+  "type": "object",
+  "required": ["title", "subtitle", "description", "modules", "lessons"],
+  "properties": {
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "description": { "type": "string" },
+    "modules": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "module", "number", "title", "summary", "objectives", "papers", "lessonPlan", "quiz"],
+        "properties": {
+          "id": { "type": "string" },
+          "module": { "type": "string" },
+          "number": { "type": "number" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "objectives": { "type": "array", "items": { "type": "string" } },
+          "papers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["title"],
+              "properties": {
+                "title": { "type": "string" },
+                "authors": { "type": "string" },
+                "year": { "type": "number" },
+                "note": { "type": "string" }
+              }
+            }
+          },
+          "lessonPlan": { "type": "array", "items": { "type": "string" } },
+          "quiz": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "prompt", "options", "answerIndex", "explanation"],
+              "properties": {
+                "id": { "type": "string" },
+                "prompt": { "type": "string" },
+                "options": { "type": "array", "items": { "type": "string" } },
+                "answerIndex": { "type": "number" },
+                "explanation": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
